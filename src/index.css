@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern chat app color palette */
+    --background: 0 0% 100%;
+    --foreground: 220 8.9% 46.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 8.9% 46.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 8.9% 46.1%;
+
+    /* ChatGPT-inspired primary colors */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 71% 55%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220 8.9% 46.1%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220 8.9% 46.1%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 142 71% 45%;
+
+    /* Chat-specific colors */
+    --chat-user: 142 71% 45%;
+    --chat-user-foreground: 0 0% 100%;
+    --chat-assistant: 0 0% 100%;
+    --chat-assistant-foreground: 220 8.9% 46.1%;
+    --chat-background: 220 14.3% 95.9%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 55%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14.3% 97%) 100%);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for chat app */
+    --background: 216 12.2% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 216 12.2% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 216 12.2% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 71% 55%;
+
+    --secondary: 216 12.2% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 216 12.2% 16%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 216 12.2% 16%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 12.2% 16%;
+    --input: 216 12.2% 16%;
+    --ring: 142 71% 45%;
+
+    /* Dark chat colors */
+    --chat-user: 142 71% 45%;
+    --chat-user-foreground: 0 0% 100%;
+    --chat-assistant: 216 12.2% 16%;
+    --chat-assistant-foreground: 210 40% 98%;
+    --chat-background: 216 12.2% 7%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 55%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(216 12.2% 7%) 0%, hsl(216 12.2% 9%) 100%);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
